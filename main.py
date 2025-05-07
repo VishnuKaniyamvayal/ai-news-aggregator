@@ -1,0 +1,6 @@
+from core.pipeline import process_article
+
+if __name__ == "__main__":
+    data = process_article({
+        "title":"Seven civilians killed, 38 injured in indiscriminate firing by Pakistan army across LoC, IB", "url":"https://www.newindianexpress.com/nation/2025/May/07/seven-civilians-killed-38-injured-in-indiscriminate-firing-by-pakistan-army-across-loc-ib", "content":"Seven persons, including a woman and two children, were killed and 38 others were injured in a major exchange of fire along the Line of Control and the International Borders across the Jammu and Kashmir light up with the Artillery pressed into action.The Indian Army is responding to the shelling in equal measure, they said on the ceasefire violations by Pakistani forces after India carried out missile strikes against nine terror targets in Pakistan and Pakistan-occupied Kashmir.All the seven deaths were reported in the worst-hit Poonch district with another 25 persons injured, the officials said.Ten persons were injured in Uri sector of Baramulla district and three others were injured in Rajouri district, the officials said."
+    })

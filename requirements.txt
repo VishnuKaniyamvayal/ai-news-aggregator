@@ -1,0 +1,19 @@
+# Core functionality
+streamlit
+langchain
+tiktoken
+google-generativeai
+
+# Parsing and NLP
+newspaper3k
+beautifulsoup4
+feedparser
+spacy
+textblob
+
+# Scheduling
+schedule
+python-dotenv
+
+# Optional (for LLM dev/debugging)
+rich
