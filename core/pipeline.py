@@ -16,9 +16,9 @@ def process_article(raw_article: dict) -> dict:
     """
     try:
         # step 1 - clean text
-        cleaned_text = clean_article(raw_article["content"])
+        # cleaned_text = clean_article(raw_article["content"])
         # step 2 - summarize
-        summary = summarize_with_model(cleaned_text)
+        summary = summarize_with_model(raw_article["content"])
         # step 3 - categorize
         category = categorize_with_model(summary)
         # step 4 - entities
@@ -27,14 +27,14 @@ def process_article(raw_article: dict) -> dict:
         return {
             "id": str(uuid.uuid4()),
             "title": raw_article["title"],
-            "url": raw_article["url"],
-            "published_at": raw_article.get("published_at", datetime.utcnow().isoformat()),
+            "url": raw_article["link"],
+            "published_at": raw_article["published"],
             "summary": summary,
             "category": category,
             "entities": entities,
-            "source": raw_article.get("source"),
+            "source": raw_article["link"],
         }
 
     except Exception as e:
-        print(f"[pipeline] error processing article {e}")
+        print(f"[pipeline] error processing article {e.with_traceback()}")
         return None
